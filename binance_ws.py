@@ -3,7 +3,9 @@ import threading
 import websocket
 import pandas as pd
 
-class BinanceWSClient:
+from .base import BaseDataClient
+
+class BinanceWSClient(BaseDataClient):
     """
     A simple WebSocket client that connects to Binance and buffers the latest
     price and volume data in memory. Runs in a daemon thread.
